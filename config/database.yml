@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: pikachu
+  password: ruby
+
+development:
+  <<: *default
+  database: AirPikachu_development
+  username: pikachu
+  password: ruby
+
+test:
+  <<: *default
+  database: AirPikachu_test
+
+production:
+  <<: *default
+  database: AirPikachu_production
+  username: pikachu
+  password: ruby
