@@ -9,8 +9,22 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/message' %>
+
+
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
+
+<!-- Debugging -->
+    <!-- <script>
+      <% flash.each do |key, value| %>
+      <% type = key.to_s.gsub('alert','error').gsub('notice','success') %>
+          console.log('Login type is <%= key %>');
+          console.log('Login message is <%= value %>');
+      <% end %>
+    </script> -->
+
+
     <div class="container">
       <%= yield %>
     </div>
