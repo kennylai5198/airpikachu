@@ -282,13 +282,22 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :facebook, '517125728724902', 'ca55f0b6a95764625858145f1e079a43',
+
+  # added this for facebook authentication
+  if Rails.env == "production"
+      fb_callback = "https://myairpikachu.herokuapp.com/auth/facebook/callback"
+  else
+      fb_callback = "http://localhost:3000/auth/facebook/callback"
+  end
+
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'],
                    scope: 'email',
                    info_fields: 'email,name',
                    secure_image_url: true,
-                   callback_url: "http://localhost:3000/auth/facebook/callback",
+                   callback_url: fb_callback,
                    client_options: {
                      site: 'https://graph.facebook.com/v2.11',
                      authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"
                    }
+
 end
