@@ -16,7 +16,6 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to listing_room_path(@room), notice: "Saved..."
     else
-      # render :new, notice: "Something went wrong..."
       flash[:alert] = "Something went wrong..."
       render :new
     end
@@ -53,10 +52,17 @@ class RoomsController < ApplicationController
     if @room.update(new_params)
       flash[:notice] = "Saved..."
     else
-      # flash[:notice] = "Something went wrong..."
       flash[:alert] = "Something went wrong..."
     end
     redirect_back(fallback_location: request.referer)
+  end
+
+  # Reservations
+  def preload
+    today = Date.today
+    reservations = @room.reservations.where("start_date >= ? OR end_date >=?", today, today)
+
+    render json: reservations
   end
 
   private
