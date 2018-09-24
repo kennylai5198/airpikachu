@@ -20,6 +20,9 @@ a {
   color: #00a699;
 }
 
+.text-red, .icon-red {
+  color: #ff5a5f;
+}
 
 // Navbar
 .navbar-default {
@@ -332,4 +335,16 @@ a {
   font-size: 16px;
   font-weight: 600;
   color: #00a699;
+}
+
+// Home Page
+.discovery-card {
+  background-size: cover;
+  background-position: center;
+  height: 326px;
+}
+
+.banner {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
