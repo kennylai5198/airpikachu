@@ -168,6 +168,15 @@ a {
   border: 1px solid #00a699;
 }
 
+.form-group input[type="radio"] {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.btn-group label {
+  margin-right: 15px;
+}
+
 .form-group select {
   width: 100%;
   color: #565a5c;
@@ -356,7 +365,7 @@ a {
 }
 
 .fc-past {
-  background-color: lightray;
+  background-color: darkgray;
 }
 
 .fc-day {
@@ -379,4 +388,11 @@ a {
   position: relative;
   top: 7px;
   left: 20px;
+}
+
+.day-price {
+  position: absolute;
+  color: #eaa90b;
+  bottom: 2px;
+  right: 2px;
 }
