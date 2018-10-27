@@ -300,4 +300,6 @@ Devise.setup do |config|
                      authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"
                    }
 
+  config.omniauth :stripe_connect, 'ca_DqQKhEsVszIVmJXVxFvkY1tjFe7JO7nf', 'sk_test_4tXSVqAr0ZD4C60EzyE0pQ92', scope: 'read_write', stripe_landing: 'login'  
+
 end
