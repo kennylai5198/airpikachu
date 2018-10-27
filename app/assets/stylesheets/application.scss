@@ -72,6 +72,7 @@ a {
 .btn.btn-normal {
   border: 1px solid #ff5a5f;
   background-color: #ff5a5f;
+  width: 100%;
 }
 
 .btn.btn-normal:active {
@@ -395,4 +396,95 @@ a {
   color: #eaa90b;
   bottom: 2px;
   right: 2px;
+}
+
+// Payment form
+// form {
+//   width: 480px;
+//   margin: 20px auto;
+// }
+
+label {
+  position: relative;
+  color: #6a7c94;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+label > span {
+  float: left;
+}
+
+.field {
+  background: white;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid #cfd7df;
+  border-radius: 24px;
+  color: #32315e;
+  outline: none;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  cursor: text;
+  width: 76%;
+  float: right;
+}
+
+.field::-webkit-input-placeholder { color: #cfd7df; }
+.field::-moz-placeholder { color: #cfd7df; }
+.field:-ms-input-placeholder { color: #cfd7df; }
+
+.field:focus,
+.field.StripeElement--focus {
+  border-color: #f99a52;
+}
+
+// button {
+//   float: left;
+//   display: block;
+//   background-image: linear-gradient (-180deg, #f8b563 0%, #f99a52 100%);
+//   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), inset 0 -1px 0 0 #e57c45;
+//   color: white;
+//   border-radius: 24px;
+//   border: 0;
+//   margin-top: 20px;
+//   font-size: 17px;
+//   font-weight: 500;
+//   width: 100%;
+//   height: 48px;
+//   line-height: 48px;
+//   outline: none;
+// }
+
+// button:focus {
+//   background: #ef8c41;
+// }
+
+// button:active {
+//   background: #e17422;
+// }
+
+.outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  min-height: 20px;
+  text-align: center;
+}
+
+.success, .error {
+  display: none;
+  font-size: 13px;
+}
+
+.success.visible, .error.visible {
+  display: inline;
+}
+
+.error {
+  color: #e4584c;
 }
