@@ -60,4 +60,7 @@ Rails.application.routes.draw do
     post '/auth/stripe_connect/callback' => 'omniauth_callbacks#stripe_connect'
   end
 
+  get '/notification_settings' => "settings#edit"
+  post '/notification_settings' => "settings#update"
+
 end
